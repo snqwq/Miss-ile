@@ -70,7 +70,7 @@ def setup(mis: int, tar: int, enmi: int, obs:int , trails: bool): #! mis = missi
         obstacle.goto(0, 0)
         obstacles.append(obstacle)
     # set up explosion
-    for i in range(10):
+    for i in range(1):
         explosion = turtle.Turtle()
         explosion.hideturtle()
         explosion.speed(0)
@@ -158,18 +158,22 @@ def enemy_guidance_predictive():
 # cool explosion effect
 def explode():
     for explosion in explosions:
-        explosion.goto(hits[0].xcor(), hits[0].ycor())
-        explosion.showturtle()
-        explosion.setheading(random.randint(0, 360))
-        explosion.forward(10)
-        explosion.color(random.choice(["orange", "yellow", "red", "white"]))
-        time.sleep(0.05)
-        explosion.hideturtle()
+        for i in range(10):
+            explosion.goto(hits[0].xcor(), hits[0].ycor())
+            explosion.showturtle()
+            explosion.setheading(random.randint(0, 360))
+            explosion.forward(10)
+            explosion.color(random.choice(["orange", "yellow", "red", "white"]))
+            time.sleep(0.01)
+            explosion.hideturtle()
     hits.clear()
 
 
+
+#!SECTION
+#ANCHOR - Setup config
 # run setup
-setup(1, 1, 5, 0, True)
+setup(5, 5, 5, 5, True)
 
 # ANCHOR - Main loop
 
@@ -217,12 +221,24 @@ while True:
                     explode()
                     points -= 1
                     print(points, "points!")
-    # check for end of game
-    if len(targets) == 0:
-        print("Missiles won!")
-        break
+    # check if an enemy hit an obstacle
+    if len(enemies) > 0:
+        for obstacle in obstacles:
+            for enemy in enemies:
+                if obstacle.distance(enemy) < 30:
+                    hits.append(obstacle)
+                    obstacles.remove(obstacle)
+                    obstacle.hideturtle()
+                    explode()
+                    points += 1
+                    print(points, "points!")
+
+    # check if game over and have win or lose based on points
     if len(missiles) == 0:
-        print("Missiles lost.")
+        if points > 0:
+            print("You win!")
+        else:
+            print("You lose!")
         break
 
-time.sleep(3)
+input("Press enter to exit")
