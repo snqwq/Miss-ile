@@ -8,6 +8,7 @@ import threading
 #ANCHOR -  variables
 
 points: int = 0
+oldpoints: int = 0
 missilespeed: int = 5
 enemyspeed: int = 3
 
@@ -169,12 +170,26 @@ def explode():
     hits.clear()
 
 
+#!SECTION
+#SECTION - Setup
+
+# ANCHOR - eternal pen
+eternal_pen = turtle.Turtle()
+eternal_pen.hideturtle()
+eternal_pen.speed(0)
+eternal_pen.color("white")
+eternal_pen.penup()
+eternal_pen.goto(0, 300)
+eternal_pen.write("Points: {}".format(points),
+                  align="center", font=("System", 24, "normal"))
+
+# ANCHOR - Setup config
+# run setup
+setup(1, 1, 10, 0, True)
+
+
 
 #!SECTION
-#ANCHOR - Setup config
-# run setup
-setup(5, 5, 5, 5, True)
-
 # ANCHOR - Main loop
 
 while True:
@@ -195,6 +210,7 @@ while True:
                     targets.remove(target)
                     target.hideturtle()
                     explode()
+                    oldpoints = points
                     points += 1
                     print(points, "points!")
     # check if missile hit an obstacle\
@@ -206,6 +222,7 @@ while True:
                     missiles.remove(missile)
                     missile.hideturtle()
                     explode()
+                    oldpoints = points
                     points -= 1
                     print(points, "points!")
     # check if an enemy hit a missile
@@ -219,6 +236,7 @@ while True:
                     enemies.remove(enemy)
                     enemy.hideturtle()
                     explode()
+                    oldpoints = points
                     points -= 1
                     print(points, "points!")
     # check if an enemy hit an obstacle
@@ -230,15 +248,28 @@ while True:
                     obstacles.remove(obstacle)
                     obstacle.hideturtle()
                     explode()
+                    oldpoints = points
                     points += 1
                     print(points, "points!")
 
+    # update points if changed
+    if points != oldpoints:
+        eternal_pen.clear()
+        eternal_pen.write("Points: {}".format(points),
+                            align="center", font=("System", 24, "normal"))
+    oldpoints = points
     # check if game over and have win or lose based on points
     if len(missiles) == 0:
         if points > 0:
-            print("You win!")
+            print("Missile win!")
+            eternal_pen.clear()
+            eternal_pen.write("Missile win!", align="center",
+                              font=("System", 24, "normal"))
         else:
-            print("You lose!")
+            print("Missile lose!")
+            eternal_pen.clear()
+            eternal_pen.write("Missile lose!", align="center",
+                              font=("System", 24, "normal"))
         break
 
-input("Press enter to exit")
+time.sleep(5)
