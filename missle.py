@@ -185,7 +185,7 @@ eternal_pen.write("Points: {}".format(points),
 
 # ANCHOR - Setup config
 # run setup
-setup(1, 1, 10, 0, True)
+setup(1, 1, 1, 0, True)
 
 
 
