@@ -1,5 +1,4 @@
 import math
-import random
 import turtle
 import random
 import time
