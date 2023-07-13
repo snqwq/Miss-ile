@@ -1,6 +1,8 @@
 # Missile
 epic gamer cool missile sim thing
 
+![example image](img/game.png)
+
 ## thingamajigs
 - missile ![missile](img/missile.png)
 - enemy ![enemy](img/enemy.png)
