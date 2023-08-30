@@ -15,6 +15,7 @@ epic gamer cool missile sim thing
 | object  | type       | description                                 | progress | effectiveness |
 | ------- | ---------- | ------------------------------------------- | -------- | ------------- |
 | missile | direct     | go to nearest target                        | 100% 👍  | 75% ✅       |
+| missile | avoidance  | go to nearest target avoiding obstacles     | 0% 👎    | ??%❓        |
 | enemy   | direct     | go to nearest missile                       | 100% 👍  | 50% ➖       |
 | enemy   | predictive | go to where the nearest missile will be     | 40% 👎   | ??%❓        |
 | enemy   | defensive  | go to the missile closest to nearest target | 0% 👎    | ??%❓        |
