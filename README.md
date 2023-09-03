@@ -14,12 +14,16 @@ epic gamer cool missile sim thing
 
 | object  | type       | description                                 | progress | effectiveness |
 | ------- | ---------- | ------------------------------------------- | -------- | ------------- |
-| missile | direct     | go to nearest target                        | 100% 👍  | 75% ✅       |
-| missile | avoidance  | go to nearest target avoiding obstacles     | 0% 👎    | ??%❓        |
+| missile | direct     | go to nearest target                        | 100% 👍  | ~75% ✅      |
+| missile | avoidance  | go to nearest target avoiding obstacles     | [V2](https://github.com/snqwq/Missile/tree/2.X.X) 🌿  | ??% ❓       |
+| enemy   | direct     | go to nearest missile                       | 100% 👍  | ~50% ➖      |
+| enemy   | predictive | go to where the nearest missile will be     | [V2](https://github.com/snqwq/Missile/tree/2.X.X) 🌿  | ??% ❓       |
+| enemy   | defensive  | go to the missile closest to nearest target | [V2](https://github.com/snqwq/Missile/tree/2.X.X) 🌿  | ??% ❓       |
+| target  | static     | dont move (pretty simple)                   | 100% 👍  | ~0% ❌       |
 
-## Version 2
+## [Version 2](https://github.com/snqwq/Missile/tree/2.X.X)
 
-This is the second version of the missile simulation. It includes updates and improvements made by the developer. The changes made in this version include:
+### Changes
 
 - Improved graphics
 - Additional guidance types
@@ -27,3 +31,4 @@ This is the second version of the missile simulation. It includes updates and im
 - More efficient code
 - More accurate simulation
 - General improvements
+- More documentation
