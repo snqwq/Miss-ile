@@ -1,5 +1,6 @@
 # Missile
 
+<<<<<<< Updated upstream
 epic gamer cool missile sim thing
 
 ![example image](img/game.png)
@@ -27,3 +28,9 @@ This is the second version of the missile simulation. It includes updates and im
 - More efficient code
 - More accurate simulation
 - General improvements
+=======
+- [*Miss*-ile](#miss-ile)
+  - [](#)
+
+## 
+>>>>>>> Stashed changes
