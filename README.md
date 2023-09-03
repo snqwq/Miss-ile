@@ -1,6 +1,6 @@
-# Missile
+# *Miss*-ile
 
-epic gamer cool missile sim thing
+(get it? miss? missile? miss-il)
 
 ![example image](img/game.png)
 
