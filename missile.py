@@ -22,19 +22,27 @@ window.set_caption("Missile sim")
 entity_batch = pyglet.graphics.Batch()
 terrain_batch = pyglet.graphics.Batch()
 
+#ANCHOR - Setup terrain
+
 #ANCHOR - Setup missile
 missile = pyglet.sprite.Sprite(pyglet.image.load("assets/missile.png"), x=0, y=0, batch=entity_batch)
 missile.rotation = 90
 
-#ANCHOR - place missile
+#!SECTION
+
+#SECTION - placement
+
+#ANCHOR - Place missile
 missile.x = window.width / 2
 missile.y = window.height / 2
 
 
+#SECTION - Functions
 @window.event
 def on_draw():
     window.clear()
     terrain_batch.draw()
     entity_batch.draw()
 
-pyglet.app.run()
+if __name__ == "__main__":
+    pyglet.app.run()
