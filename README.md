@@ -20,4 +20,4 @@ This is the second version of the missile simulation. It is a complete rewrite o
 ## Guidance
 
 | Guidance Type | Description | Implemented | Notes |
-| :--- | :--- | :--- | :--- |
+| --- | --- | --- | --- |
