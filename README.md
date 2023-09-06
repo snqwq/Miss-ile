@@ -1,6 +1,7 @@
 # *Miss*-ile
 
-(get it? miss? missile? miss-il)
+get it? miss? missile? miss-il
+[(theres a 2.0 now!)](https://github.com/snqwq/Miss-ile/tree/2.X.X-(experimental))
 
 ![example image](img/game.png)
 
