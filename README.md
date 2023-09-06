@@ -30,5 +30,4 @@ This is the second version of my missile simulation. It is a complete rewrite of
 ## Sources
 
 - [Modern Missile Guidance](https://ftp.idu.ac.id/wp-content/uploads/ebook/tdg/MILITARY%20PLATFORM%20DESIGN/Modern%20Missile%20Guidance.pdf)
-- [Missile guidance wiki page](https://www.wikiwand.com/en/Missile_guidance
-)
+- [Missile guidance wiki page](https://www.wikiwand.com/en/Missile_guidance)
