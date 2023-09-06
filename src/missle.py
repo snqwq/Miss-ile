@@ -1,8 +1,6 @@
-import math
 import turtle
 import random
 import time
-import threading
 
 #ANCHOR -  variables
 
